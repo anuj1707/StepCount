@@ -24,11 +24,11 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
 
     // Creating a variable which will counts total steps
     // and it has been given the value of 0 float
-    private var totalSteps = 540f
+    private var totalSteps = 0f
 
     // Creating a variable which counts previous total
     // steps and it has also been given the value of 0 float
-    private var previousTotalSteps = 540f
+    private var previousTotalSteps = 0f
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -71,8 +71,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
 
             // Current steps are calculated by taking the difference of total steps
             // and previous steps
-            val currentSteps = totalSteps.toInt() - previousTotalSteps.toInt()+540
-
+            val currentSteps = totalSteps.toInt() - previousTotalSteps.toInt()+0
 
             // It will show the current steps to the user
             tv_stepsTaken.text = ("$currentSteps")
